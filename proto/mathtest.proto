@@ -1,0 +1,27 @@
+// msg.proto
+
+// 规定使用proto3的语法
+syntax = "proto3";
+
+option java_package = "ex.grpc";
+
+// 将声明的内容加入命名空间
+package mathtest;
+
+// 定义服务, 流数据放到括号里面
+service MathTest {
+    // Function invoked to send the request
+    rpc sendRequest (MathRequest) returns (MathReply) {}
+}
+
+// The request message containing requested numbers
+message MathRequest {
+    int32 a = 1;
+    int32 b = 2;
+}
+
+// The response message containing response
+message MathReply {
+    int32 result = 1;
+}
+
