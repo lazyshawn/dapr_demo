@@ -1,3 +1,10 @@
+/*
+* @brief : 订阅并打印消息
+* 1. 创建服务端，绑定到 sidecar 的监听端口
+* 1. 订阅话题 A
+* 1. dapr run --app-id subscribe --app-port 8088 build/src/dapr_subscribe
+*/
+
 #include <grpcpp/grpcpp.h>
 #include <httplib.h>
 #include <iostream>

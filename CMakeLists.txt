@@ -23,44 +23,6 @@ else()
   option(BUILD_SHARED_LIBS "Build using shared libraries" ON)
 endif()
 
-# include_directories(include)
-# 3rd party lib
-# link_directories(lib)
-
 # 编译 protbuf
 add_subdirectory(proto)
-
-# add_executable(test_state
-#   src/test_state.cpp
-# )
-# target_link_libraries(test_state
-#   httplib
-# )
-#
-# add_executable(test_subscribe
-#   src/test_subscribe.cpp
-# )
-# target_link_libraries(test_subscribe
-#   httplib
-# )
-#
-# add_executable(test_publish
-#   src/test_publish.cpp
-# )
-# target_link_libraries(test_publish
-#   httplib
-# )
-#
-# add_executable(grpc_svr
-#   src/test_grpc_svr.cpp
-# )
-# target_link_libraries(grpc_svr PUBLIC
-#   libmath
-# )
-#
-# add_executable(grpc_cli
-#   src/test_grpc_cli.cpp
-# )
-# target_link_libraries(grpc_cli PUBLIC
-#   libmath
-# )
+add_subdirectory(src)
